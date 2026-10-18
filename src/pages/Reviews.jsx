@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { Star, MessageSquare, ExternalLink, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Star, MessageSquare, ExternalLink, Sparkles, Search, Filter } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
@@ -18,7 +18,18 @@ const loveStoryImages = [
   { src: '/images/ext_ls_8.webp', alt: 'Happy bride with Meenakari set' },
 ];
 
+const categoryTabs = [
+  { id: 'all', label: 'All Reviews' },
+  { id: 'bridal', label: 'Bridal & Wedding' },
+  { id: 'gold', label: 'Gold & Diamond' },
+  { id: 'nri', label: 'Global / NRI Clients' },
+  { id: 'staff', label: 'Hospitality & Staff' },
+];
+
 export default function Reviews() {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
   useEffect(() => {
     document.title = 'Customer Reviews & Testimonials | Girishbhai Gandevikar Jewellers Vadodara';
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -29,6 +40,18 @@ export default function Reviews() {
       );
     }
   }, []);
+
+  const filteredReviews = reviews.filter((review) => {
+    const matchesCategory =
+      activeCategory === 'all' || review.category === activeCategory;
+    const q = searchQuery.toLowerCase().trim();
+    const matchesSearch =
+      !q ||
+      review.name.toLowerCase().includes(q) ||
+      (review.title && review.title.toLowerCase().includes(q)) ||
+      review.text.toLowerCase().includes(q);
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="bg-surface-dark pt-28">
@@ -136,7 +159,7 @@ export default function Reviews() {
         </div>
       </section>
 
-      {/* 3. REVIEWS MASONRY GRID */}
+      {/* 3. REVIEWS MASONRY GRID WITH INTERACTIVE FILTERS */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
@@ -145,13 +168,92 @@ export default function Reviews() {
             subtitle="Read genuine stories from Vadodara families and international clients who chose Girishbhai Gandevikar Jewellers."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.map((review, idx) => (
-              <AnimatedSection key={idx} delay={(idx % 6) * 0.08}>
-                <ReviewCard review={review} />
-              </AnimatedSection>
-            ))}
+          {/* Interactive Filters & Search Bar */}
+          <div className="mb-12 space-y-6">
+            {/* Search Input */}
+            <div className="max-w-md mx-auto relative">
+              <Search className="w-4 h-4 text-gold-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Search reviews by name, staff (Sandeep, Parul), or keyword..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-surface-card border border-gold-500/30 rounded-xs py-2.5 pl-11 pr-4 text-warm-100 placeholder-warm-400 text-xs sm:text-sm focus-visible:outline-2 focus-visible:outline-gold-400 transition-colors"
+                aria-label="Search reviews"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gold-400 hover:text-gold-200"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+              {categoryTabs.map((tab) => {
+                const count =
+                  tab.id === 'all'
+                    ? reviews.length
+                    : reviews.filter((r) => r.category === tab.id).length;
+                const isActive = activeCategory === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setActiveCategory(tab.id)}
+                    className={`px-3.5 py-1.5 rounded-xs text-xs font-medium tracking-wider uppercase transition-all duration-200 flex items-center gap-2 border ${
+                      isActive
+                        ? 'bg-gold-500 text-surface-dark border-gold-500 font-semibold shadow-md shadow-gold-950/30'
+                        : 'bg-surface-card border-gold-500/20 text-warm-300 hover:border-gold-400/50 hover:text-gold-300'
+                    }`}
+                  >
+                    <span>{tab.label}</span>
+                    <span
+                      className={`text-[10px] px-1.5 py-0.2 rounded-xs ${
+                        isActive
+                          ? 'bg-surface-dark text-gold-300'
+                          : 'bg-gold-500/10 text-gold-400'
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
+
+          {/* Reviews Grid */}
+          {filteredReviews.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredReviews.map((review, idx) => (
+                <AnimatedSection key={`${review.name}-${idx}`} delay={(idx % 6) * 0.06}>
+                  <ReviewCard review={review} />
+                </AnimatedSection>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 text-warm-400">
+              <Filter className="w-8 h-8 text-gold-500/40 mx-auto mb-3" />
+              <p className="text-base text-warm-300">
+                No reviews found matching "{searchQuery}".
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchQuery('');
+                  setActiveCategory('all');
+                }}
+                className="mt-4 text-xs font-semibold uppercase tracking-wider text-gold-400 hover:underline"
+              >
+                Reset All Filters
+              </button>
+            </div>
+          )}
 
           <div className="mt-16 text-center space-y-4">
             <Button

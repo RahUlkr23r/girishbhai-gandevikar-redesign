@@ -4,6 +4,7 @@ export const reviews = [
     text: "Dear Girish bhai Gandevikar Jwellers Team, Thank you for the wonderful jewellery buying experience today. Yashasvi ji, Sandeep bhai and entire staff were very supportive...",
     link: "https://maps.app.goo.gl/yZqsn2jkgpoyts4w5",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Rajiv Patel",
@@ -11,6 +12,7 @@ export const reviews = [
     text: "Excellent customer service and wide selection of silver, gold, and diamond items.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "gold",
   },
   {
     name: "Hardik Patel",
@@ -18,6 +20,7 @@ export const reviews = [
     text: "Purchased our bridal Meenakari sets from here. Purity of 22k gold is 100% verified with hallmark certificates. The family hospitality makes you feel so welcomed. Will definitely recommend.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "bridal",
   },
   {
     name: "Purohit Mansi Rajendrakumar",
@@ -25,12 +28,14 @@ export const reviews = [
     text: "The experience I shared with my family was exceptional. Our ideas and requests were respectfully met and I got my engagement shopping done with such ease and delight. I am grateful.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "bridal",
   },
   {
     name: "Divya Goel",
     text: "I had a fantastic experience with Girishbhai Gandevikar Jewellers and amazed by their quality, responsiveness, speed and guidance. I am based in the USA and needed for the wedding...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "nri",
   },
   {
     name: "priyanka panchal",
@@ -38,6 +43,7 @@ export const reviews = [
     text: "We had a great experience at the jewellery shop. Ms. Parul provided excellent customer service—she was very helpful, patient, and showed us beautiful and suitable options...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "RONAK PANCHOLI",
@@ -45,12 +51,14 @@ export const reviews = [
     text: "Sujay bhai is very supportive and cooperative for repairing of gold items with utmost care... Prioritize the repair..His behaviour is quite customer oriented. Thanks😊",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Abhishek K",
     text: "Went there to buy Silver chain and had a really good experience. Mahima and Kashak gave us great customer service and were really helpful. They took the time and explained everything.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "gold",
   },
   {
     name: "Sury turnITin",
@@ -58,18 +66,21 @@ export const reviews = [
     text: "Very good infrastructure and authentic jewellery store. The staff and specially the owner Girishbhai and his family are extremely helpful, gentle and courteous towards all customers...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Margee Desai",
     text: "Very polite staff and good collection of gold and diamond jewellery. Highly recommended for authentic gold purchase in Vadodara.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "gold",
   },
   {
     name: "kakkad ankit",
     text: "Amazing experience at this jewellery shop! The collection is beautiful and the quality of the gold is excellent. The staff which assisted me named Soniya was extremely polite...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Ayeshah Khan",
@@ -77,6 +88,7 @@ export const reviews = [
     text: "It was a great experience. Upto the mark. At first I was doubtful, ordering online but it was beyond expectations.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "nri",
   },
   {
     name: "Smiti Mandal",
@@ -84,6 +96,7 @@ export const reviews = [
     text: "Had a wonderful experience at Gandevikar. The staff is very polite, supportive, and handles customers really well. Their service and hospitality make people feel comfortable...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Nisarg Parikh",
@@ -91,6 +104,7 @@ export const reviews = [
     text: "I have Visited Gandevikar Jewellers & We had great Shopping Experience with Sales Person called Komal. Komal is an exceptional talent whose hard work and positive energy makes a difference...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Akshat Tiwari",
@@ -98,18 +112,21 @@ export const reviews = [
     text: "Found the perfect lightweight gold earrings/ring for daily use. The finish is incredibly polished and it's very comfortable to wear. Great value for the price and the making quality is top-notch...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "gold",
   },
   {
     name: "Pradeep Mistry",
     text: "I ordered from the UK and I honestly can't thank the team at Girishbhai Gandevikar Jewellers enough. From the very beginning, the whole experience felt personal and truly special...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "nri",
   },
   {
     name: "Manya Joshi",
     text: "Darshana went above and beyond to help us choose the perfect jewellery. Her patience, enthusiasm, and expert knowledge gave us confidence in our decision. The store has a wonderful collection...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Gunjan theunflinchinggal",
@@ -117,17 +134,20 @@ export const reviews = [
     text: "You turn 37 only once & This time I got these two gorgeous gold nose rings. Mahima was the perfect help in selecting what I had in mind & Sandeep bhaiya got it customized...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "bridal",
   },
   {
     name: "Vidhi Mistry",
     text: "We initially purchased jewellery pieces, but later felt that one design wasn't the right fit for us. When we went back two days later to discuss options, Sandeep bhai was incredibly understanding...",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "staff",
   },
   {
     name: "Vaibhav Rabari",
     text: "Very supportive staff and wide variety of traditional & modern jewellery options. Wonderful experience overall.",
     link: "https://www.google.com/maps/place/Gandevikar+Jewellers+-+Girishbhai/@22.307462,73.1740238,17z",
     rating: 5,
+    category: "gold",
   },
 ];

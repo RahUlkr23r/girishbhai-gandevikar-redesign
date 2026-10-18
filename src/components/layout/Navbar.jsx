@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, Phone, MapPin, Sparkles } from 'lucide-react';
 import { InstagramIcon } from '../ui/SocialIcons';
 
@@ -16,7 +16,6 @@ const navLinks = [
 
 export default function Navbar({ onMenuClick }) {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {

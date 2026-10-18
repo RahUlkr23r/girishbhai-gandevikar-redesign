@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Send, Truck, Sparkles, ArrowRight, ShieldCheck, Heart } from 'lucide-react';
+import { Send, Truck, Sparkles, ArrowRight } from 'lucide-react';
 import { InstagramIcon } from '../components/ui/SocialIcons';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import SectionHeading from '../components/ui/SectionHeading';

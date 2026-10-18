@@ -1,12 +1,7 @@
 import { useEffect } from 'react';
 import {
   TrendingUp,
-  Sparkles,
-  ShieldCheck,
   MessageCircle,
-  HelpCircle,
-  Clock,
-  Coins,
   MapPin,
   ExternalLink,
 } from 'lucide-react';

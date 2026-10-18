@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Search, Sparkles, HelpCircle, MessageCircle } from 'lucide-react';
+import { Search, HelpCircle, MessageCircle } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
-import SectionHeading from '../components/ui/SectionHeading';
 import Accordion from '../components/ui/Accordion';
 import Button from '../components/ui/Button';
 import VisitCTA from '../components/ui/VisitCTA';

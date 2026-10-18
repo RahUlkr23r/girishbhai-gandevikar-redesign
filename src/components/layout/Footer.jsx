@@ -14,6 +14,8 @@ import { InstagramIcon, YouTubeIcon } from '../ui/SocialIcons';
 import Button from '../ui/Button';
 
 export default function Footer() {
+  const currentYear = 2026;
+
   return (
     <footer className="bg-surface-darker text-warm-300 pt-16 sm:pt-20 pb-12 border-t border-gold-500/20 relative overflow-hidden">
       {/* Decorative ambient glow */}
@@ -264,7 +266,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-gold-500/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-400">
         <div>
-          © {new Date().getFullYear()} Girishbhai Gandevikar Jewellers. All rights reserved.
+          © {currentYear} Girishbhai Gandevikar Jewellers. All rights reserved.
         </div>
         <div className="flex items-center gap-6">
           <Link to="/faq" className="hover:text-gold-400 transition-colors">

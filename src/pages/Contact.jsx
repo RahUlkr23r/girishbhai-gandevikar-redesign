@@ -6,12 +6,9 @@ import {
   Clock,
   Send,
   CheckCircle,
-  ExternalLink,
-  MessageCircle,
   Sparkles,
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
-import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import VisitCTA from '../components/ui/VisitCTA';

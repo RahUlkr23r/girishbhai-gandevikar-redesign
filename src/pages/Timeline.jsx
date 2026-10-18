@@ -3,7 +3,6 @@ import { MapPin, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
 import { InstagramIcon } from '../components/ui/SocialIcons';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import SectionHeading from '../components/ui/SectionHeading';
-import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import VisitCTA from '../components/ui/VisitCTA';
 import { timelineEvents, brandValues } from '../data/timeline';

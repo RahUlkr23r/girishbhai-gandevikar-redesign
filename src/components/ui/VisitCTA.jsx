@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, MessageCircle } from 'lucide-react';
 import { InstagramIcon, YouTubeIcon } from './SocialIcons';
 import AnimatedSection from './AnimatedSection';
 import Button from './Button';

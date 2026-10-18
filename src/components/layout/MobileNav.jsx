@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Phone, MapPin, MessageCircle, ExternalLink } from 'lucide-react';
+import { X, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { InstagramIcon, YouTubeIcon } from '../ui/SocialIcons';
 
 const mobileLinks = [
@@ -96,13 +96,13 @@ export default function MobileNav({ isOpen, onClose }) {
                     `py-3 px-4 rounded-xs text-base font-heading tracking-wide transition-all duration-200 flex items-center justify-between ${
                       isActive
                         ? 'text-gold-400 bg-gold-500/10 border-l-2 border-gold-400 font-semibold'
-                        : 'text-warm-200 hover:text-gold-300 hover:bg-white/5'
-                    } ${link.highlight ? 'border border-gold-400/40 text-gold-300 my-2' : ''}`
+                        : 'text-warm-200 hover:text-gold-300 hover:bg-gold-500/5'
+                    } ${link.highlight ? 'border border-gold-400/40 bg-gold-500/10 text-gold-300 my-2 rounded-xs' : ''}`
                   }
                 >
                   <span>{link.name}</span>
                   {link.highlight && (
-                    <span className="text-[10px] font-sans font-semibold uppercase px-2 py-0.5 bg-gold-400/20 rounded-xs text-gold-300">
+                    <span className="text-[10px] font-sans font-semibold uppercase px-2 py-0.5 bg-gold-400 text-surface-dark rounded-xs">
                       Live
                     </span>
                   )}

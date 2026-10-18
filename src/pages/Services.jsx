@@ -10,9 +10,6 @@ import {
   Calculator,
   MessageCircle,
   CheckCircle,
-  Gem,
-  Coins,
-  ShieldAlert,
 } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import SectionHeading from '../components/ui/SectionHeading';
