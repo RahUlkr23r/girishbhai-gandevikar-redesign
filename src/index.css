@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ========================================
+   GIRISHBHAI GANDEVIKAR JEWELLERS
+   Design System & Global Styles
+   ======================================== */
+
+@theme {
+  /* Primary – Heritage Gold */
+  --color-gold-50: #fdf8ef;
+  --color-gold-100: #f9edd5;
+  --color-gold-200: #f2d7a8;
+  --color-gold-300: #e9bc72;
+  --color-gold-400: #e0a04c;
+  --color-gold-500: #d4882e;
+  --color-gold-600: #c07424;
+  --color-gold-700: #a05a20;
+  --color-gold-800: #834921;
+  --color-gold-900: #6c3d1e;
+  --color-gold-950: #3d1e0d;
+
+  /* Neutral – Warm Charcoal */
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f0ede8;
+  --color-warm-200: #dfd9cf;
+  --color-warm-300: #cbc1b1;
+  --color-warm-400: #b5a590;
+  --color-warm-500: #a69179;
+  --color-warm-600: #99816c;
+  --color-warm-700: #806a5b;
+  --color-warm-800: #69574d;
+  --color-warm-900: #574940;
+  --color-warm-950: #2e2621;
+
+  /* Burgundy Accent */
+  --color-burgundy-50: #fdf2f4;
+  --color-burgundy-100: #fce7ea;
+  --color-burgundy-200: #f9d0d9;
+  --color-burgundy-300: #f4a9b8;
+  --color-burgundy-400: #ed7a93;
+  --color-burgundy-500: #e04d6f;
+  --color-burgundy-600: #cc2d57;
+  --color-burgundy-700: #ac2048;
+  --color-burgundy-800: #901e41;
+  --color-burgundy-900: #7b1d3c;
+  --color-burgundy-950: #440b1d;
+
+  /* Surface colors */
+  --color-surface-dark: #0c0a08;
+  --color-surface-darker: #070605;
+  --color-surface-card: #141110;
+  --color-surface-light: #faf8f5;
+  --color-surface-cream: #f5f0e8;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface-dark);
+  color: var(--color-warm-200);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-gold-600);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-600);
+}
+
+/* ========================================
+   Typography Utilities
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-warm-100);
+  line-height: 1.2;
+}
+
+/* ========================================
+   Focus Styles (Accessibility)
+   ======================================== */
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500), var(--color-gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-600), transparent);
+}
+
+.glass-card {
+  background: rgba(20, 17, 16, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 160, 76, 0.1);
+}

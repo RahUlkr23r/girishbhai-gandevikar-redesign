@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /gobalpanel/
+Disallow: /database/
+
+Host: https://girishbhaigandevikar.com
+Sitemap: https://girishbhaigandevikar.com/sitemap.xml
